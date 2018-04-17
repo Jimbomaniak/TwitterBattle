@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { api } from '../../utils/api'
 
 
 function SelectLanguage (props) {
@@ -23,8 +24,15 @@ SelectLanguage.propTypes = {
 
 class Popular extends Component {
   state = {
-    selectedLanguage: 'All'
+    selectedLanguage: 'All',
+    repos: null
   };
+
+  componentDidMount() {
+    console.log('------', 'mount');
+    api.fetchPopularRepos(this.state.selectedLanguage)
+      .then((repos) => console.log(repos))
+  }
 
   updateLanguage = (lang) =>  {
     this.setState({selectedLanguage: lang})
