@@ -81,10 +81,7 @@ class Battle extends Component {
 
   render() {
     let match = this.props.match;
-    let playerOneName = this.state.playerOneName;
-    let playerTwoName = this.state.playerTwoName;
-    let playerOneImage = this.state.playerOneImage;
-    let playerTwoImage = this.state.playerTwoImage;
+    const { playerOneName, playerTwoName, playerOneImage ,playerTwoImage } = this.state;
 
     return (
       <div>

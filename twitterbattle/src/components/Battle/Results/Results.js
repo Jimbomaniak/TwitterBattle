@@ -34,7 +34,7 @@ function Player (props) {
   )
 }
 
-Player.PropTypes = {
+Player.propTypes = {
   label: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
   profile: PropTypes.object.isRequired,
