@@ -104,7 +104,7 @@ class Battle extends Component {
 
           {!playerTwoName &&
           <PlayerInput id='playerTwo'
-                       label='Player One'
+                       label='Player Two'
                        onSubmit={this.handleSubmit}
           />}
 
