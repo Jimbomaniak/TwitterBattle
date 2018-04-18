@@ -16,10 +16,10 @@ class App extends Component {
         <div className="container">
           <NavBar/>
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/battle' component={Battle} />
-            <Route path='/battle/results' component={Results} />
-            <Route path='/popular' component={Popular} />
+            <Route exact path='/TwitterBattle' component={Home} />
+            <Route exact path='/TwitterBattle/battle' component={Battle} />
+            <Route path='/TwitterBattle/battle/results' component={Results} />
+            <Route path='/TwitterBattle/popular' component={Popular} />
             <Route render={() => <p>Not Found</p>} />
           </Switch>
         </div>

@@ -79,7 +79,7 @@ class Results extends Component {
       return (
         <div>
           <p>{error}</p>
-          <Link to='/battle'>Reset</Link>
+          <Link to='TwitterBattle/battle'>Reset</Link>
         </div>
       )
     }

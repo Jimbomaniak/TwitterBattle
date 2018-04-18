@@ -8,7 +8,7 @@ class Home extends Component {
         <h1>Github Battle: Battle your friends... and stuff.</h1>
 
 
-        <Link className='button' to='/battle'>
+        <Link className='button' to='/TwitterBattle/battle'>
           Battle
         </Link>
       </div>
