@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import queryString from 'query-string';
+import qs from 'qs';
 import { api } from '../../../utils/api';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
@@ -50,7 +50,7 @@ class Results extends Component {
   };
 
   componentDidMount() {
-    let players = queryString.parse(this.props.location.search);
+    let players = qs.parse(this.props.location.search.slice(1));
     api.battle([
       players.playerOneName,
       players.playerTwoName
