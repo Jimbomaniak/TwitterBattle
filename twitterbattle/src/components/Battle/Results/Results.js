@@ -10,7 +10,9 @@ function Profile (props) {
   let info = props.info;
 
   return (
-    <PlayerPreview  avatar={info.avatar_url} username={info.login}>
+    <PlayerPreview  avatar={info.avatar_url}
+                    username={info.login}
+                    userurl={info.html_url}>
       <ul className="space-list-items">
         {info.name && <li>{info.name}</li>}
         {info.location && <li>{info.location}</li>}
