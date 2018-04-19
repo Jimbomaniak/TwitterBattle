@@ -4,6 +4,7 @@ import { api } from '../../../utils/api';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
 import PlayerPreview from '../PlayerPreview/PlayerPreview'
+import Loading from "../../Loading/Loading";
 
 
 function Profile (props) {
@@ -74,7 +75,7 @@ class Results extends Component {
     const { error, winner, loser, loading } = this.state;
 
     if (loading === true) {
-      return <p>Loading</p>
+      return <Loading />
     }
 
     if (error) {
