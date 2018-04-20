@@ -88,18 +88,19 @@ class Results extends Component {
     }
 
     return (
-      <div className='row'>
-        <Player
-          label='Winner'
-          score={winner.score}
-          profile={winner.profile}
-        />
-        <Player
-          label='Loser'
-          score={loser.score}
-          profile={loser.profile}
-        />
-
+      <div className='players'>
+        <div className='row'>
+          <Player
+            label='Winner'
+            score={winner.score}
+            profile={winner.profile}
+          />
+          <Player
+            label='Loser'
+            score={loser.score}
+            profile={loser.profile}
+          />
+        </div>
       </div>
     )
   }
