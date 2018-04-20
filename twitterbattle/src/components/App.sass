@@ -1,6 +1,19 @@
+
+
 .container
-  min-width: 1200px
-  margin: 0 auto
+  display: grid
+  grid-template-columns: 70px 2fr 2fr 70px
+  grid-template-rows: 50px 2fr 50px
+  grid-template-areas: "nav nav nav nav" ".  main main ." ". . . ."
+  grid-column-gap: 5px
+
+.players
+  grid-area: main
+
+.nav
+  display: flex
+  grid-area: nav
+  align-self: center
 
 ul
   padding: 0
@@ -11,22 +24,30 @@ li
 .languages
   display: flex
   justify-content: center
+  font-size: 20px
   li
     margin: 10px
     font-weight: bold
     cursor: pointer
+    transition: color 400ms
+    &:hover
+      color: rgba(208, 2, 27, 0.71)
+.popular
+  grid-area: main
+
 
 .popular-list
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-around
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+  grid-template-rows: auto
 
 .popular-item
-  margin: 20px
+  margin: 3px
   text-align: center
 
 .space-list-items
   margin-bottom: 7px
+  text-align: center
 
 .avatar
   width: 150px
@@ -36,8 +57,7 @@ li
   font-size: 20px
   margin: 10px
 
-.nav
-  display: flex
+
 
 .active
   font-weight: bold
@@ -52,7 +72,8 @@ a
 .home-container
   display: flex
   flex-direction: column
-  align-items: center
+  grid-area: main
+  text-align: center
 
 .button
   color: #e6e6e6
@@ -107,3 +128,29 @@ a
   text-align: center
   &:hover
     cursor: pointer
+
+@media (max-width: 600px)
+  .avatar
+    width: 120px
+  .container
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 50px 2fr 50px
+    grid-template-areas: ". nav ." ". main ." ". . . "
+    grid-gap: 2px
+    .nav
+      justify-self: center
+    .popular .languages
+      font-size: 12px
+    .popular-list
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+    .row
+      display: inline-block
+      .column
+        width: 200px
+
+
+
+@media (min-width: 1230px)
+  .container
+    grid-column-gap: 20px
+
