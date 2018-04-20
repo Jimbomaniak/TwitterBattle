@@ -25,9 +25,11 @@ function RepoGrid (props) {
             <div className='popular-rank'> #{index + 1}</div>
             <ul className='space-list-items'>
               <li>
+                <a href={repo.html_url} target='_blank'>
                 <img className='avatar'
                      src={repo.owner.avatar_url}
                      alt={`Avatar for ${repo.owner.login}`} />
+                </a>
               </li>
               <li>
                 <a href={repo.html_url}>{repo.name}</a>
@@ -79,7 +81,7 @@ class Popular extends Component {
 
   render() {
     return (
-      <div>
+      <div className='popular'>
         <SelectLanguage
           selectedLanguage={this.state.selectedLanguage}
           onSelect={this.updateLanguage}
