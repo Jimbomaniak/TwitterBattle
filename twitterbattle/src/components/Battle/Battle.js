@@ -84,7 +84,7 @@ class Battle extends Component {
     const { playerOneName, playerTwoName, playerOneImage ,playerTwoImage } = this.state;
 
     return (
-      <div>
+      <div className='players'>
         <div className='row'>
           {!playerOneName &&
             <PlayerInput id='playerOne'
@@ -119,7 +119,6 @@ class Battle extends Component {
                 Reset
               </button>
             </PlayerPreview>}
-
         </div>
         {playerOneImage && playerTwoImage &&
           <Link
